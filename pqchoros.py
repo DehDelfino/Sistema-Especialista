@@ -18,7 +18,7 @@ restaurantes ={
 'Churrascaria Jardins Grill':0,     #Churrascaria - Família  sul
 'Churrascaria Boi Dourado':0,       #Churrascaria - Família lest
 
-'Marcado Sal':0 ,                   #Vários restaurantes - Família  - Ar livre
+'Mercado Sal':0 ,                   #Vários restaurantes - Família  - Ar livre
 'Cadore':0 ,                        #Vários restaurantes - Família  - Ar livre norte
 'Mercadoteca':0,                    #Vários restaurantes - Barzinho - Ar livre oeste
 'Fresh Live Market':0,              #Vários restaurantes - Barzinho - Ar livre central
@@ -77,7 +77,7 @@ if res == 1:
   restaurantes['Barolo Curitiba'] +=1
   restaurantes['Baggio'] +=1
   restaurantes['Love Vegan Pizza']+=1
-  restaurantes['Marcado Sal'] +=1
+  restaurantes['Mercado Sal'] +=1
   restaurantes['Mercadoteca'] +=1
   restaurantes['Fresh Live Market'] +=1
   restaurantes['Souq'] +=1
@@ -147,7 +147,7 @@ res = int(input("Você tem filhos?\n"
 if res == 1:
   restaurantes['Churrascaria Jardins Grill'] +=1
   restaurantes['Churrascaria Boi Dourado'] +=1
-  restaurantes['Marcado Sal'] +=1
+  restaurantes['Mercado Sal'] +=1
   restaurantes['Cadore'] +=1
 
 
@@ -160,12 +160,12 @@ res = int(input("Você costuma praticar atividades em familia?\n"
 
 # Opções restaurantes familiares
 if res == 1:
-    restaurantes['Marcado Sal'] +=1
+    restaurantes['Mercado Sal'] +=1
     restaurantes['Souq'] +=1
     restaurantes['Madalosso'] +=1
     restaurantes['Osteria Donna Lena'] +=1
     restaurantes['Ernesto'] +=1
-    restaurantes['Barolo'] +=1
+    restaurantes['Barolo Curitiba'] +=1
     restaurantes['Baggio'] +=1
     restaurantes['Dom Carmino'] +=1
     restaurantes['Avenida Paulista'] +=1
@@ -173,15 +173,15 @@ if res == 1:
     restaurantes['Limoeiro Casa de Comidas'] +=1
  
 
-# Pergunta idade
-res = int(input("Qual sua idade?\n"
-                  "[1] 15-22\n"
-                  "[2] 23-35\n"
-                  "[3] 35-50\n"
-                  "[4] 50+\n"
-                  "Digite sua opção: "))   
+# # Pergunta idade
+# res = int(input("Qual sua idade?\n"
+#                   "[1] 15-22\n"
+#                   "[2] 23-35\n"
+#                   "[3] 35-50\n"
+#                   "[4] 50+\n"
+#                   "Digite sua opção: "))   
                   
-# Opções restaurante por idade
+# # Opções restaurante por idade
                   
                   
 # Pergunta show
@@ -225,7 +225,7 @@ res = int(input("Você possui animais de estimação?\n"
 # Opções com área pra animais
 if res == 1:
     restaurantes['Veg Veg'] +=1
-    restaurantes['Marcado Sal'] +=1
+    restaurantes['Mercado Sal'] +=1
     restaurantes['Cadore'] +=1
     restaurantes['Mercadoteca'] +=1
     restaurantes['Yamon'] +=1
@@ -246,7 +246,7 @@ res = int(input("Você mora na região\n"
 if res == 1:
     restaurantes['Sunset Cafe'] += 1
     restaurantes['Famiglia Originale'] += 1
-    restaurantes['Azuki ']+= 1
+    restaurantes['Azuki']+= 1
     restaurantes['Osteria Donna Lena'] += 1
     restaurantes['Ernesto'] += 1                  
     restaurantes['Limoeiro Casa de Comidas'] += 1
@@ -280,20 +280,11 @@ else:
     restaurantes['Nuu Nikkei'] +=1
     restaurantes['Taj Bar'] +=1
     restaurantes['Barolo Curitiba'] +=1
-    restaurantes['Barolo'] +=1
+    restaurantes['Barolo Curitiba'] +=1
     restaurantes['Baggio'] +=1
     restaurantes['Dom Carmino'] +=1
     restaurantes['Avenida Paulista'] +=1
-
-
-# Pergunta gênero
-res = int(input("Qual seu gênero\n"
-
-              "[1] Feminino\n"
-              "[2] Masculino\n"
-              "[3] Prefiro não declarar\n"
-              "[4] Outro\n"
-              "Digite sua opção: "))   
+ 
 
 
 # Pergunta horário de dormir
@@ -304,7 +295,7 @@ res = int(input("Você dorme cedo?\n"
 
 # Opções restaurantes que abrem mais cedo
 if res ==1:
-  restaurantes['Marcado Sal'] += 1
+  restaurantes['Mercado Sal'] += 1
   restaurantes['Mercadoteca'] += 1              
   restaurantes['Souq'] +=1
   restaurantes['Azuki'] += 1
@@ -313,14 +304,19 @@ if res ==1:
     
 
      
-# Pergunta gasto financeiro
-res = int(input("Quanto você gasta em media em resutaurantes (por pessoa)?\n"
-              "[1] R$ 30,00 - R$ 50,00\n"
-              "[2] R$ 50,00 - R$ 1oo,0 \n"
-              "[3] R$ R$ 100,0 - R$150,00 \n"
-              "[4] R$150,00 + \n"
-              "Digite sua opção: "))    
+# # Pergunta gasto financeiro
+# res = int(input("Quanto você gasta em media em resutaurantes (por pessoa)?\n"
+#               "[1] R$ 30,00 - R$ 50,00\n"
+#               "[2] R$ 50,00 - R$ 1oo,0 \n"
+#               "[3] R$ R$ 100,0 - R$150,00 \n"
+#               "[4] R$150,00 + \n"
+#               "Digite sua opção: "))    
 
 
-                
+
+for keys in restaurantes.keys():
+  if restaurantes[keys] >= 10:
+    print("Você mais probabilidade de gotas desse retaurante: "+ keys )
+  elif restaurantes[keys] >=5:
+    print(f"Restaurantes com 5: {keys}")
                 
