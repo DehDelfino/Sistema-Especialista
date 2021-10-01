@@ -305,13 +305,50 @@ if res ==1:
 
      
 # # Pergunta gasto financeiro
-# res = int(input("Quanto você gasta em media em resutaurantes (por pessoa)?\n"
-#               "[1] R$ 30,00 - R$ 50,00\n"
-#               "[2] R$ 50,00 - R$ 1oo,0 \n"
-#               "[3] R$ R$ 100,0 - R$150,00 \n"
-#               "[4] R$150,00 + \n"
-#               "Digite sua opção: "))    
+res = int(input("Quanto você gasta em media em resutaurantes (por pessoa)?\n"
+                "[1] R$ 30,00 - R$ 50,00\n"
+                "[2] R$ 50,00 - R$ 100,0 \n"
+                "[3] R$ R$ 100,0 - R$150,00 \n"
+                "[4] R$150,00 + \n"
+                "Digite sua opção: "))    
+if res == 1:
+  restaurantes['Semente de Girassol'] += 1
 
+elif res == 2:
+  restaurantes['Veg Veg'] += 1
+  restaurantes['Restaurante Dom Veggie'] += 1
+  restaurantes['Faniglia Originale'] += 1
+  restaurantes['Love Vegan Pizza'] += 1
+  restaurantes['GreenGo'] += 1
+  restaurantes['Sorella'] += 1
+  restaurantes['Churrascaria  Boi Dourado'] += 1
+  restaurantes['Mercado Sal'] += 1
+  restaurantes['Fresh Live Market'] += 1
+  restaurantes['Yamon'] += 1
+  restaurantes['Souq'] += 1
+  restaurantes['Sunset Cafe'] += 1
+  restaurantes['GeekCafe'] += 1
+  restaurantes['Osteria Donna Lena'] += 1
+  restaurantes['Limoeiro Casa de Comidas'] += 1
+  restaurantes['Baggio'] += 1
+  restaurantes['Dom Carmino'] += 1
+  
+elif res == 3:
+  restaurantes['Bee.O'] += 1
+  restaurantes['Churrascaria Jardins Grill'] += 1
+  restaurantes['Cadore'] += 1
+  restaurantes['Mercadoteca'] += 1
+  restaurantes['Madalosso'] += 1
+  restaurantes['Bar Do Alemão'] += 1
+  restaurantes['Taj Bar'] += 1
+  restaurantes['Nuu Nikkei'] += 1
+  restaurantes['Azuki'] += 1
+  restaurantes['Ernesto'] += 1
+  restaurantes['Barolo Curitiba'] += 1
+  restaurantes['Avenida Paulista'] += 1
+  
+else:
+ restaurantes['Churrascaria Batel Grill'] += 1
 
 
 for keys in restaurantes.keys():
