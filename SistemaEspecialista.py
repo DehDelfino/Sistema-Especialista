@@ -158,38 +158,22 @@ if resVeg == 1:
   restaurantes['Famiglia Originale'] += 1
   restaurantes['Restaurante Dom Veggie'] +=1
 
+if  resVeg == 2:
+    restaurantes['Churrascaria Batel Grill'] -=1
+    restaurantes['Churrascaria Jardins Grill'] -=1
 
-# Pergunta pizza
-resPizza = int(input("Você gosta de Pizza?\n"
-                  "[1] Sim\n"
-                  "[2] Não\n"
-                  "Digite sua opção: "))
+if resSaude == 2:
+  # Pergunta hamburgueria
+  resHamburger = int(input("Você gosta de Hamburgueria?\n"
+                    "[1] Sim\n"
+                    "[2] Não\n"
+                    "Digite sua opção: ")) 
 
-# Opções restaurantes que servem pizza
-if resPizza == 1:
-  restaurantes['Bee.O'] += 1
-  restaurantes['Famiglia Originale'] +=1
-  restaurantes['Avenida Paulista'] +=1
-  restaurantes['Dom Carmino'] +=1
-  restaurantes['Barolo Curitiba'] +=1
-  restaurantes['Baggio'] +=1
-  restaurantes['Love Vegan Pizza']+=1
-  restaurantes['Mercado Sal'] +=1
-  restaurantes['Mercadoteca'] +=1
-  restaurantes['Fresh Live Market'] +=1
-  restaurantes['Souq'] +=1
-
-# Pergunta hamburgueria
-resHamburger = int(input("Você gosta de Hamburgueria?\n"
-                  "[1] Sim\n"
-                  "[2] Não\n"
-                  "Digite sua opção: ")) 
-
-# Opções hamburguerias                  
-if resHamburger == 1:
-  restaurantes['Veg Veg'] +=1   
-  restaurantes['GreenGo'] += 1
-  restaurantes['GeekCafe'] +=1
+  # Opções hamburguerias                  
+  if resHamburger == 1:
+    restaurantes['Veg Veg'] +=1   
+    restaurantes['GreenGo'] += 1
+    restaurantes['GeekCafe'] +=1
 
 
 # Pergunta restaurante italiano
@@ -204,7 +188,27 @@ if resItaliana == 1:
     restaurantes['Osteria Donna Lena'] +=1
     restaurantes['Ernesto'] += 1
     restaurantes['Barolo Curitiba'] += 1  
-    
+
+if resItaliana == 1:  
+  # Pergunta pizza
+  resPizza = int(input("Você gosta de Pizza?\n"
+                    "[1] Sim\n"
+                    "[2] Não\n"
+                    "Digite sua opção: "))
+
+  # Opções restaurantes que servem pizza
+  if resPizza == 1:
+    restaurantes['Bee.O'] += 1
+    restaurantes['Famiglia Originale'] +=1
+    restaurantes['Avenida Paulista'] +=1
+    restaurantes['Dom Carmino'] +=1
+    restaurantes['Barolo Curitiba'] +=1
+    restaurantes['Baggio'] +=1
+    restaurantes['Love Vegan Pizza']+=1
+    restaurantes['Mercado Sal'] +=1
+    restaurantes['Mercadoteca'] +=1
+    restaurantes['Fresh Live Market'] +=1
+    restaurantes['Souq'] +=1
 
 # Pergunta restaurante japonês
 resJapa = int(input("Você gosta de comida japonesa?\n"
@@ -218,20 +222,6 @@ if resJapa ==1:
   restaurantes['Taj Bar'] += 1                   
   restaurantes['Azuki'] += 1 
 
-
-# Pergunta barzinhos    
-resBar = int(input("Você gosta de Barzinho?\n"
-                  "[1] Sim\n"
-                  "[2] Não\n"
-                  "Digite sua opção: "))  
-
-# Opções barzinhos 
-if resBar == 1:
-  restaurantes['Yamon'] +=1
-  restaurantes['Mercadoteca'] += 1              
-  restaurantes['Fresh Live Market'] += 1         
-  restaurantes['Souq'] +=1 
-  restaurantes['Sunset Cafe'] += 1
   
 
 # Pergunta filhos/família
@@ -287,6 +277,23 @@ if resFilho == 1 and resFamilia== 1:
       restaurantes['Souq'] +=1
       restaurantes['Sunset Cafe'] +=1
       restaurantes['Limoeiro Casa de Comidas'] +=1
+
+
+if resFilhos == 2 or resFamilia != 1:
+  # Pergunta barzinhos    
+  resBar = int(input("Você gosta de Barzinho?\n"
+                    "[1] Sim\n"
+                    "[2] Não\n"
+                    "Digite sua opção: "))  
+
+  # Opções barzinhos 
+  if resBar == 1:
+    restaurantes['Yamon'] +=1
+    restaurantes['Mercadoteca'] += 1              
+    restaurantes['Fresh Live Market'] += 1         
+    restaurantes['Souq'] +=1 
+    restaurantes['Sunset Cafe'] += 1
+
 
 # Pergunta região da cidade
 res = int(input("Você mora na região\n"
